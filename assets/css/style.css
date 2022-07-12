@@ -11,12 +11,24 @@ body{
 
 .container {
     background-color: #a2a9ab;
-    max-width: 600px;
+    width: 500px;
+    max-width: 800px;
+
+    height: 300px;
+    max-height: 600px;
+
     margin: 20px auto;
     padding: 40px;
     border-radius: 10px;
     
     
+}
+
+.controls > .btn {
+    font-size: 20px;
+    border-color: #a2a9ab;
+    border-radius: 10px;
+    padding: 5px;
 }
 .btn.correct{
     color: white;
@@ -28,4 +40,5 @@ body{
 .hide {
     display:none;
 }
+
 
