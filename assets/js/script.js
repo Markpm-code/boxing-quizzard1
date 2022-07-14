@@ -1,5 +1,6 @@
-const startButton = document.getElementById('start-btn')
-const nextButton = document.getElementById('next-btn')
+
+const startButton = document.getElementById("start-btn")
+const nextButton = document.getElementById("next-btn")
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
@@ -13,6 +14,7 @@ nextButton.addEventListener('click', () => {
 })
 
 function startGame() {
+    console.log('Started')
     startButton.classList.add('hide')
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
@@ -48,9 +50,9 @@ function resetState() {
     }
 }
 function selectAnswer(e) {
-    const selectButton = e.target
+    const selectedButton = e.target
     const correct = selectedButton.dataset.correct
-    setStatusClass(document.body, correct) 
+    setStatusClass(document.body, correct)
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
@@ -63,7 +65,7 @@ function selectAnswer(e) {
 }
 
 function setStatusClass(element, correct) {
-    setStatusClass(button, button.dataset.correct)
+    clearStatusClass(element)
     if (correct) {
         element.classList.add('correct')
     } else {
@@ -75,20 +77,29 @@ function clearStatusClass(element) {
     element.classList.remove('correct')
     element.classList.remove('wrong')
 }
-
-const questions = [
+const questions =[
     {
-        question: 'What is 2 + 2',
+        question: 'What is 2 + 2 ?',
         answers: [
-            {text: '4', correct: true},
-            {text: '22', correct: false}
+            { text: '4', correct: true },
+            { text: '22', correct: false }
         ]
     },
     {
-        question: 'Question: What does KO mean?',
+        question: 'What is 10 + 6 ?',
         answers: [
-            {text: 'Knockout', correct: true},
-            {text: 'Kick Out', correct: false}
+            { text: '16', correct: true },
+            { text: '36', correct: false }
         ]
-    }
+    },
+    {
+        question: 'What does KO mean?',
+        answers: [
+            { text: 'Knock Out', correct: true },
+            { text: 'Knock Off', correct: false },
+            { text: 'Knock On', correct: false }
+        ]
+    },
+    
+   
 ]
