@@ -79,17 +79,19 @@ function clearStatusClass(element) {
 }
 const questions =[
     {
-        question: 'What is 2 + 2 ?',
+        question: 'Who is the third man in the ring?',
         answers: [
-            { text: '4', correct: true },
-            { text: '22', correct: false }
+            { text: 'The Referee', correct: true },
+            { text: 'The Coach', correct: false },
+            { text: 'The Ring Announcer', correct: false },
         ]
     },
     {
-        question: 'What is 10 + 6 ?',
+        question: "How many minutes per round in Men's Professional Boxing?",
         answers: [
-            { text: '16', correct: true },
-            { text: '36', correct: false }
+            { text: '2 minutes', correct: false },
+            { text: '5 minutes', correct: false },
+            { text: '3 minutes', correct: true}
         ]
     },
     {

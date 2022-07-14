@@ -9,8 +9,13 @@ body{
     text-align: center;
 }
 
+h1 {
+    font-size: 50px;
+    color: white;
+}
+
 .container {
-    background-color: #a2a9ab;
+    background-color:  #a2a9ab;
     width: 500px;
     max-width: 800px;
 
@@ -20,25 +25,61 @@ body{
     margin: 20px auto;
     padding: 40px;
     border-radius: 10px;
+
     
     
 }
 
 .controls > .btn {
     font-size: 20px;
-    border-color: #a2a9ab;
+    border-color:  #a8232f;
+    color:#a8232f;
     border-radius: 10px;
-    padding: 5px;
+    padding: 10px;
+    
+}
+#start-btn {
+    margin-top: 25%;
+    font-size: 30px;
 }
 .btn.correct{
-    color: white;
+    border-color: black;
+    background-color: white;
 }
 
 .btn.wrong {
-    color:blue;
+    color: #a8232f;
+}
+
+#next-btn {
+    color: white;
+    background-color: dodgerblue;
+    border-color: #a2a9ab;
+}
+
+.btn{
+    background-color: white;
+    margin: 20px 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    border-color: #a8232f;
+    border-radius: 10px;
+    padding:10px;
+    
+}
+
+.btn:hover {
+    background-color: #a8232f;
+    color: white;
+    border-color: white;
+    
 }
 .hide {
     display:none;
 }
 
-
+#question {
+    font-size: 30px;
+    color: white;
+    margin: 10px auto;
+}
